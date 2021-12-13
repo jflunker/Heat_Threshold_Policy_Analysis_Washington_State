@@ -1321,7 +1321,7 @@ colnames(all_data) = c("county", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"
 all_data = all_data[order(all_data$county),]
 
 all_data = data.frame(rbind(all_data, total_summary))
-write.csv(all_data, file = "max_temp_89_or_grtr_total_exceedances_per_month_summed_over_2002_2020.csv")
+write.csv(all_data, file = "max_temp_95_or_grtr_total_exceedances_per_month_summed_over_2002_2020.csv")
 
 
 # ≥ 80 heat index max per day, total number of days per month, county-level, 2002-2020
