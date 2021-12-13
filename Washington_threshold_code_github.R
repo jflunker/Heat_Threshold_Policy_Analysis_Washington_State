@@ -2,7 +2,7 @@
 
 
 # This code provides visualizations and tables to examine variability in meteorological data and heat threshold exceedances throughout the state of Washington at the county level.
-# The data acquisition and code process is approximately 7 steps including: data extraction (starts @ line 14, calculate relative humidity (line 208), calculate heat index (line 273), generate county maps (line 578), generate monthly county-level summary tables (line 1108), and generate threshold days per month summary tables (line 1576).
+# The data acquisition and code execution process is approximately five steps, each of which are marked in the below navigation bar (1: data extraction; 2:generate monthly county-level summary tables; 3:generate threshold days per month summary tables; 4: generate average number of days above thresholds at the county-level summary tables; and 5:generate county-level exceedance maps.
 # As an initial step prior to executing the below code, download the PRISM weather data of interest. For the below code the following daily data for the years of 2002-2020 is required: maximum temperature, maximum vapor pressure deficit, mean temperature, minimum temperature, and minimum vapor pressure deficit.
 # As an additional preliminary step, one must also have the Washington shape files (Washington_state.shx, .sbx, .sbn, .prg, .dbf, and .CPG files) in working directory to generate state maps with county borders.
 # Issues with mac error when attempting to load the 'raster' package (Error = xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun.) can be corrected by executing the following command in the R terminal: xcode-select --install
@@ -16,25 +16,28 @@
 
 
 
+# NOTE: one may skip section 1 of this code (extract data from PRISM .csv files) code if using the .Rdata files (3_within_R_data_files_PRISM_Summary folder on jflunker GitHub repo) with pre-extracted PRISM data based on the below extraction method
+# if skipping data extraction from PRISM and using the provided .Rdata, start code at section two (~line 596), Generate monthly_county_level_summary_tables 2002-2020"
 
+######### extract data from PRISM .csv files -----------------------------------------------------------------
+#SECTION 1
 
-######### extract data from PRISM-----------------------------------------------------------------
+# This section of code is to extract PRISM weather data from yearly/monthly/hourly modeled weather data using the average of cells within polygons. PRISM data must de downloaded prior to executing section 1.
+# More detailed information about PRISM data can be found at https://prism.oregonstate.edu/ (opyright ©<year>, PRISM Climate Group, Oregon State University, https://prism.oregonstate.edu)
 
-# This section of code is to extract PRISM weather data using the average of cells within polygons
-# More detailed information about PRISM data can be found at https://prism.oregonstate.edu/
-
+# FIRST, download daily hourly weather data from PRISM, covering the years of 2002 to 2020 (https://prism.oregonstate.edu/recent/).
 # Data is extraction based on the average of cells within polygons
-# Each county (polygon) has multiple pixels within the polygon, this method takes average of all the pixels (referred to as "within cells").
-
-# To run this code, first download the Washington state research area shapefiles (from the below noted jflunker github repo or https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html) and PRISM weather data (https://prism.oregonstate.edu/). 
+# Each county (polygon) has multiple pixels within the polygon, this method takes average of all the pixels (referred to as "within cells"). Spactial resolution is 4x4 KM. 
 # If interested in PRISM weather data outside of 2002-2020, you may want to change data period by changing "start_year" and "end_year" in the code to match years of interest/PRISM data.
+
+# To run the first section of code (extraction), one must also download the Washington state research area shapefiles (from the below noted jflunker github repo or https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html) and PRISM weather data (https://prism.oregonstate.edu/). 
 # For ease of use the Washington state shape files can be downloaded from this GitHub repository: "https://github.com/jflunker/Heat_Threshold_Policy_Analysis_Washington_State"
 # If interested in downloading from the source, most state shapefiles can be found at https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html
 
 
 
 
-# data extraction based on the average of cells within polygons
+# data extraction based on the average of cells within polygons will perform 5 data extraction steps
 #   1 data extraction : Maximum temperature
 #   2 data extraction : maximum vapor pressure deficit
 #   3 data extraction : mean temperature
@@ -592,7 +595,8 @@ save(min_HI_within_cells, file = "min_HI_within_cells.Rdata")
 
 
 
-########## monthly_county_level_summary_table -----------------------------------------------------------
+########## Generate monthly_county_level_summary_tables 2002-2020 -----------------------------------------------------------
+#SECTION 2
 
 # This section of code generates monthly counts of max, mean, and min temperatures and heat indexs at the county level
 
@@ -1064,6 +1068,7 @@ write.csv(all_data, file = "Average_SD_minimum_heat_index_per_county_per_month_s
 
 
 ########## threshold_total_days_monthly_county_level_summary_tables ----------------------------------------------------------
+#SECTION 3
 
 # Total number of days over multiple heat thresholds at the monthly and county level from 2002-2020
 
@@ -1555,6 +1560,7 @@ write.csv(all_data, file = "max_HI_95_or_grtr_total_exceedances_per_month_summed
 
 
 ######### threshold_mean_sd_days_monthly_county_level_summary_tables ---------------
+# SECTION 4
 
 # This section of code is designed to calculate the average (sd) for the number of days per month the temp is ≥ thresholds 
 
@@ -2140,7 +2146,8 @@ write.csv(final_data,file = "avg_num_days_per_month_max_HI_95_mean_sd_2002_2020.
 
 
 
-######### county_level_maps --------------------------------------------------------
+######### Create county_level_maps with exceedance values --------------------------------------------------------
+# SECTION 5
 
 # This part is to make maps showing the total number of days exceeding HI thresholds (80,85,89,95) and maximum temperatures (80,85,89,95) during warm period (May-Sep) and outside of the period (Jan-Apr, Oct-Dec)
 # For ease of use the Washington state shape files can be downloaded from this GitHub repository: "https://github.com/jflunker/Heat_Threshold_Policy_Analysis_Washington_State"
