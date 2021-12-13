@@ -1,1 +1,0 @@
-# Refer to .R code files to generate visualizations. Follow R code files in chronological ascending order, starting with 1 (1_extract.R) and ending with 8 (8_make_table_threshold_mean_sd.R). Ensure working directory is set correctly in code for 1_extract.R.
