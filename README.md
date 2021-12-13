@@ -3,5 +3,5 @@
 # Refer to .R code files to generate tables and state visualizations. 
 # All required shape files for generating WA state maps are contained in this repository ("county_shapefiles" folder), yet can also be downloaded directly from the source. See comments in each .R code file for how to download the data directly.
 # All required PRISM weather data must be downloaded directy from the PRISM website https://prism.oregonstate.edu) following the directions in the document, PRISM_data.docx, which is found in this repository. Alternatively, the R data files used to generate tables and figures based on the PRISM data can be found in this respository in the folder "3_within_R_data_files_PRISM_Summary".
-# Stade-wide vilualizations of exceedance statistics at the county-level (generated from the R code in this respository) can be found in the folder "State_level_figures_exceedances". 
+# Stade-wide vilualizations of exceedance statistics at the county-level (generated from the R code in this respository) can be found in the folder "State_level_figures_exceedances". Table versions of this data are found in the file "WA_threshold_exceedance_data_Tables.docx"
 
