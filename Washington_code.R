@@ -689,7 +689,7 @@ csv_file_data_m = merge(csv_file_data, all_max_HI, by = "NAME")
 plot1 = ggplot() + 
   geom_polygon(aes(x=long,y=lat, group=group, fill=max_HI_80_re_may_sep), 
                data=all_max_HI_poly, color='black') + scale_fill_gradient(low='white', high='red') +
-  ggtitle("Total number of days exceeding max HI 80 from May through September") +
+  ggtitle("Total number of days exceeding max HI ≥80 from May through September") +
   geom_text(data=csv_file_data, aes(label = NAME, x = centroidx , y = centroidy + 0.05))  +
   geom_text(data=csv_file_data_m, aes(label = max_HI_80_re_may_sep, x = centroidx , y = centroidy - 0.05)) +
   theme(axis.text.x = element_text(color = "grey20", size = 10, face = "plain"),
@@ -707,7 +707,7 @@ plot1 = ggplot() +
 plot2 = ggplot() + 
   geom_polygon(aes(x=long,y=lat, group=group, fill=max_HI_85_re_may_sep), 
                data=all_max_HI_poly, color='black') + scale_fill_gradient(low='white', high='red') +
-  ggtitle("Total number of days exceeding max HI 85 from May through September") +
+  ggtitle("Total number of days exceeding max HI ≥85 from May through September") +
   geom_text(data=csv_file_data, aes(label = NAME, x = centroidx , y = centroidy + 0.05))  +
   geom_text(data=csv_file_data_m, aes(label = max_HI_85_re_may_sep, x = centroidx , y = centroidy - 0.05)) +
   theme(axis.text.x = element_text(color = "grey20", size = 10, face = "plain"),
@@ -725,7 +725,7 @@ plot2 = ggplot() +
 plot3 = ggplot() + 
   geom_polygon(aes(x=long,y=lat, group=group, fill=max_HI_89_re_may_sep), 
                data=all_max_HI_poly, color='black') + scale_fill_gradient(low='white', high='red') +
-  ggtitle("Total number of days exceeding max HI 89 from May through September") +
+  ggtitle("Total number of days exceeding max HI ≥89 from May through September") +
   geom_text(data=csv_file_data, aes(label = NAME, x = centroidx , y = centroidy + 0.05))  +
   geom_text(data=csv_file_data_m, aes(label = max_HI_89_re_may_sep, x = centroidx , y = centroidy - 0.05)) +
   theme(axis.text.x = element_text(color = "grey20", size = 10, face = "plain"),
@@ -743,7 +743,7 @@ plot3 = ggplot() +
 plot4 = ggplot() + 
   geom_polygon(aes(x=long,y=lat, group=group, fill=max_HI_95_re_may_sep), 
                data=all_max_HI_poly, color='black') + scale_fill_gradient(low='white', high='red') +
-  ggtitle("Total number of days exceeding max HI 95 from May through September") +
+  ggtitle("Total number of days exceeding max HI ≥95 from May through September") +
   geom_text(data=csv_file_data, aes(label = NAME, x = centroidx , y = centroidy + 0.05))  +
   geom_text(data=csv_file_data_m, aes(label = max_HI_95_re_may_sep, x = centroidx , y = centroidy - 0.05)) +
   theme(axis.text.x = element_text(color = "grey20", size = 10, face = "plain"),
@@ -769,7 +769,7 @@ dev.off()
 plot1 = ggplot() + 
   geom_polygon(aes(x=long,y=lat, group=group, fill=max_HI_80_re_others), 
                data=all_max_HI_poly, color='black') + scale_fill_gradient(low='white', high='red') +
-  ggtitle("Total number of days exceeding max HI 80 outside May-Sept") +
+  ggtitle("Total number of days exceeding max HI ≥80 outside May-Sept") +
   geom_text(data=csv_file_data, aes(label = NAME, x = centroidx , y = centroidy + 0.05))  +
   geom_text(data=csv_file_data_m, aes(label = max_HI_80_re_others, x = centroidx , y = centroidy - 0.05)) +
   theme(axis.text.x = element_text(color = "grey20", size = 10, face = "plain"),
@@ -787,7 +787,7 @@ plot1 = ggplot() +
 plot2 = ggplot() + 
   geom_polygon(aes(x=long,y=lat, group=group, fill=max_HI_85_re_others), 
                data=all_max_HI_poly, color='black') + scale_fill_gradient(low='white', high='red') +
-  ggtitle("Total number of days exceeding max HI 85 outside May-Sept") +
+  ggtitle("Total number of days exceeding max HI ≥85 outside May-Sept") +
   geom_text(data=csv_file_data, aes(label = NAME, x = centroidx , y = centroidy + 0.05))  +
   geom_text(data=csv_file_data_m, aes(label = max_HI_85_re_others, x = centroidx , y = centroidy - 0.05)) +
   theme(axis.text.x = element_text(color = "grey20", size = 10, face = "plain"),
@@ -805,7 +805,7 @@ plot2 = ggplot() +
 plot3 = ggplot() + 
   geom_polygon(aes(x=long,y=lat, group=group, fill=max_HI_89_re_others), 
                data=all_max_HI_poly, color='black') + scale_fill_gradient(low='white', high='white') +
-  ggtitle("Total number of days exceeding max HI 89 outside May-Sept") +
+  ggtitle("Total number of days exceeding max HI ≥89 outside May-Sept") +
   geom_text(data=csv_file_data, aes(label = NAME, x = centroidx , y = centroidy + 0.05))  +
   geom_text(data=csv_file_data_m, aes(label = max_HI_89_re_others, x = centroidx , y = centroidy - 0.05)) +
   theme(axis.text.x = element_text(color = "grey20", size = 10, face = "plain"),
@@ -823,7 +823,7 @@ plot3 = ggplot() +
 plot4 = ggplot() + 
   geom_polygon(aes(x=long,y=lat, group=group, fill=max_HI_95_re_others), 
                data=all_max_HI_poly, color='black') + scale_fill_gradient(low='white', high='white') +
-  ggtitle("Total number of days exceeding max HI 95 outside May-Sept") +
+  ggtitle("Total number of days exceeding max HI ≥95 outside May-Sept") +
   geom_text(data=csv_file_data, aes(label = NAME, x = centroidx , y = centroidy + 0.05))  +
   geom_text(data=csv_file_data_m, aes(label = max_HI_95_re_others, x = centroidx , y = centroidy - 0.05)) +
   theme(axis.text.x = element_text(color = "grey20", size = 10, face = "plain"),
@@ -958,7 +958,7 @@ csv_file_data_m = merge(csv_file_data, all_max_HI, by = "NAME")
 plot1 = ggplot() + 
   geom_polygon(aes(x=long,y=lat, group=group, fill=max_temp_80_re_may_sep), 
                data=all_max_temp_poly, color='black') + scale_fill_gradient(low='white', high='red') +
-  ggtitle("Total number of days exceeding max temperature 80 from May through September") +
+  ggtitle("Total number of days exceeding max temperature ≥80 from May through September") +
   geom_text(data=csv_file_data, aes(label = NAME, x = centroidx , y = centroidy + 0.05))  +
   geom_text(data=csv_file_data_m, aes(label = max_temp_80_re_may_sep, x = centroidx , y = centroidy - 0.05)) +
   theme(axis.text.x = element_text(color = "grey20", size = 10, face = "plain"),
@@ -976,7 +976,7 @@ plot1 = ggplot() +
 plot2 = ggplot() + 
   geom_polygon(aes(x=long,y=lat, group=group, fill=max_temp_85_re_may_sep), 
                data=all_max_temp_poly, color='black') + scale_fill_gradient(low='white', high='red') +
-  ggtitle("Total number of days exceeding max temperature 85 from May through September") +
+  ggtitle("Total number of days exceeding max temperature ≥85 from May through September") +
   geom_text(data=csv_file_data, aes(label = NAME, x = centroidx , y = centroidy + 0.05))  +
   geom_text(data=csv_file_data_m, aes(label = max_temp_85_re_may_sep, x = centroidx , y = centroidy - 0.05)) +
   theme(axis.text.x = element_text(color = "grey20", size = 10, face = "plain"),
@@ -994,7 +994,7 @@ plot2 = ggplot() +
 plot3 = ggplot() + 
   geom_polygon(aes(x=long,y=lat, group=group, fill=max_temp_89_re_may_sep), 
                data=all_max_temp_poly, color='black') + scale_fill_gradient(low='white', high='red') +
-  ggtitle("Total number of days exceeding max temperature 89 from May through September") +
+  ggtitle("Total number of days exceeding max temperature ≥89 from May through September") +
   geom_text(data=csv_file_data, aes(label = NAME, x = centroidx , y = centroidy + 0.05))  +
   geom_text(data=csv_file_data_m, aes(label = max_temp_89_re_may_sep, x = centroidx , y = centroidy - 0.05)) +
   theme(axis.text.x = element_text(color = "grey20", size = 10, face = "plain"),
@@ -1012,7 +1012,7 @@ plot3 = ggplot() +
 plot4 = ggplot() + 
   geom_polygon(aes(x=long,y=lat, group=group, fill=max_temp_95_re_may_sep), 
                data=all_max_temp_poly, color='black') + scale_fill_gradient(low='white', high='red') +
-  ggtitle("Total number of days exceeding max temperature 95 from May through September") +
+  ggtitle("Total number of days exceeding max temperature ≥95 from May through September") +
   geom_text(data=csv_file_data, aes(label = NAME, x = centroidx , y = centroidy + 0.05))  +
   geom_text(data=csv_file_data_m, aes(label = max_temp_95_re_may_sep, x = centroidx , y = centroidy - 0.05)) +
   theme(axis.text.x = element_text(color = "grey20", size = 10, face = "plain"),
@@ -1038,7 +1038,7 @@ dev.off()
 plot1 = ggplot() + 
   geom_polygon(aes(x=long,y=lat, group=group, fill=max_temp_80_re_others), 
                data=all_max_temp_poly, color='black') + scale_fill_gradient(low='white', high='red') +
-  ggtitle("Total number of days exceeding max temperature 80 outside May-Sept") +
+  ggtitle("Total number of days exceeding max temperature ≥80 outside May-Sept") +
   geom_text(data=csv_file_data, aes(label = NAME, x = centroidx , y = centroidy + 0.05))  +
   geom_text(data=csv_file_data_m, aes(label = max_temp_80_re_others, x = centroidx , y = centroidy - 0.05)) +
   theme(axis.text.x = element_text(color = "grey20", size = 10, face = "plain"),
@@ -1056,7 +1056,7 @@ plot1 = ggplot() +
 plot2 = ggplot() + 
   geom_polygon(aes(x=long,y=lat, group=group, fill=max_temp_85_re_others), 
                data=all_max_temp_poly, color='black') + scale_fill_gradient(low='white', high='red') +
-  ggtitle("Total number of days exceeding max temperature 85 outside May-Sept") +
+  ggtitle("Total number of days exceeding max temperature ≥85 outside May-Sept") +
   geom_text(data=csv_file_data, aes(label = NAME, x = centroidx , y = centroidy + 0.05))  +
   geom_text(data=csv_file_data_m, aes(label = max_temp_85_re_others, x = centroidx , y = centroidy - 0.05)) +
   theme(axis.text.x = element_text(color = "grey20", size = 10, face = "plain"),
@@ -1074,7 +1074,7 @@ plot2 = ggplot() +
 plot3 = ggplot() + 
   geom_polygon(aes(x=long,y=lat, group=group, fill=max_temp_89_re_others), 
                data=all_max_temp_poly, color='black') + scale_fill_gradient(low='white', high='white') +
-  ggtitle("Total number of days exceeding max temperature 89 outside May-Sept") +
+  ggtitle("Total number of days exceeding max temperature ≥89 outside May-Sept") +
   geom_text(data=csv_file_data, aes(label = NAME, x = centroidx , y = centroidy + 0.05))  +
   geom_text(data=csv_file_data_m, aes(label = max_temp_89_re_others, x = centroidx , y = centroidy - 0.05)) +
   theme(axis.text.x = element_text(color = "grey20", size = 10, face = "plain"),
@@ -1092,7 +1092,7 @@ plot3 = ggplot() +
 plot4 = ggplot() + 
   geom_polygon(aes(x=long,y=lat, group=group, fill=max_temp_95_re_others), 
                data=all_max_temp_poly, color='black') + scale_fill_gradient(low='white', high='white') +
-  ggtitle("Total number of days exceeding max temperature 95 outside May-Sept") +
+  ggtitle("Total number of days exceeding max temperature ≥95 outside May-Sept") +
   geom_text(data=csv_file_data, aes(label = NAME, x = centroidx , y = centroidy + 0.05))  +
   geom_text(data=csv_file_data_m, aes(label = max_temp_95_re_others, x = centroidx , y = centroidy - 0.05)) +
   theme(axis.text.x = element_text(color = "grey20", size = 10, face = "plain"),
@@ -2073,14 +2073,14 @@ write.csv(all_data, file = "max_HI_95_or_grtr_total_exceedances_per_month_summed
 
 # threshold_mean_sd_days_monthly_county_level_summary_tables ---------------
 
-# This section of code is designed to calculate the average (sd) for the number of days per month over thresholds 
+# This section of code is designed to calculate the average (sd) for the number of days per month the temp is ≥ thresholds 
 
 
 
 library(matrixStats)
 library(rgdal)
 
-# ≥ 80 maximum temperature, average (SD) number of days per year within month, county-level, 2002-2020
+# ≥ 80 maximum temperature, average (SD) number of days per month, county-level, 2002-2020
 
 rm(list = ls())
 
@@ -2150,10 +2150,10 @@ final_data = data.frame(colnames(extract_temp_all)[4:42], final_data)
 colnames(final_data) = c("county", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
 final_data = final_data[order(final_data$county),]
 
-write.csv(final_data, file = "max_temp_grtr_eq_80_mean_sd_per_county_2002_2020.csv")
+write.csv(final_data, file = "avg_num_days_per_month_max_temp_grtr_eq_80_mean_sd_per_county_2002_2020.csv")
 
 
-# ≥ 85 maximum temperature, average (SD) number of days per year within month, per county, 2002-2020
+# ≥ 85 maximum temperature, average (SD) number of days per month, per county, 2002-2020
 
 rm(list = ls())
 
@@ -2223,10 +2223,10 @@ final_data = data.frame(colnames(extract_temp_all)[4:42], final_data)
 colnames(final_data) = c("county", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
 final_data = final_data[order(final_data$county),]
 
-write.csv(final_data, file = "max_temp_85_yearly_mean_sd_2002_2020.csv")
+write.csv(final_data, file = "avg_num_days_per_month_max_temp_85_mean_sd_2002_2020.csv")
 
 
-# ≥ 85 maximum temperature, average (SD) number of days per year within month, 2002-2020
+# ≥ 85 maximum temperature, average (SD) number of days per month, 2002-2020
 
 rm(list = ls())
 
@@ -2296,10 +2296,10 @@ final_data = data.frame(colnames(extract_temp_all)[4:42], final_data)
 colnames(final_data) = c("county", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
 final_data = final_data[order(final_data$county),]
 
-write.csv(final_data, file = "max_temp_89_yearly_mean_sd_2002_2020.csv")
+write.csv(final_data, file = "avg_num_days_per_month_max_temp_89_mean_sd_2002_2020.csv")
 
 
-# ≥ 95 maximum temperature, average (SD) number of days per year within month, 2002-2020
+# ≥ 95 maximum temperature, average (SD) number of days per month, 2002-2020
 
 rm(list = ls())
 
@@ -2369,7 +2369,7 @@ final_data = data.frame(colnames(extract_temp_all)[4:42], final_data)
 colnames(final_data) = c("county", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
 final_data = final_data[order(final_data$county),]
 
-write.csv(final_data,file = "max_temp_95_yearly_mean_sd_2002_2020.csv")
+write.csv(final_data,file = "avg_num_days_per_month_max_temp_95_mean_sd_2002_2020.csv")
 
 
 #  ≥ 80 max heat index, average (SD) number of days per year within month, 2002-2020
@@ -2438,7 +2438,7 @@ final_data = data.frame(poly$NAME, final_data)
 colnames(final_data) = c("county", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
 final_data = final_data[order(final_data$county),]
 
-write.csv(final_data,file = "max_HI_80_yearly_mean_sd_2002_2020.csv")
+write.csv(final_data,file = "avg_num_days_per_month_max_HI_80_mean_sd_2002_2020.csv")
 
 
 # ≥ 85 max heat index, average (SD) number of days per year within month, 2002-2020
@@ -2509,7 +2509,7 @@ final_data = data.frame(poly$NAME, final_data)
 colnames(final_data) = c("county", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
 final_data = final_data[order(final_data$county),]
 
-write.csv(final_data, file = "max_HI_85_yearly_mean_sd_2002_2020.csv")
+write.csv(final_data, file = "avg_num_days_per_month_max_HI_85_mean_sd_2002_2020.csv")
 
 
 # ≥ 89 max heat index, average (SD) number of days per year within month, 2002-2020
@@ -2578,7 +2578,7 @@ final_data = data.frame(poly$NAME, final_data)
 colnames(final_data) = c("county", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
 final_data = final_data[order(final_data$county),]
 
-write.csv(final_data, file = "max_HI_89_yearly_mean_sd_2002_2020.csv")
+write.csv(final_data, file = "avg_num_days_per_month_max_HI_89_mean_sd_2002_2020.csv")
 
 
 # ≥ 95 max heat index, average (SD) number of days per year within month, 2002-2020
@@ -2647,7 +2647,7 @@ final_data = data.frame(poly$NAME, final_data)
 colnames(final_data) = c("county", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
 final_data = final_data[order(final_data$county),]
 
-write.csv(final_data,file = "max_HI_95_yearly_mean_sd_2002_2020.csv")
+write.csv(final_data,file = "avg_num_days_per_month_max_HI_95_mean_sd_2002_2020.csv")
 
 #END CODE
 #Updated 12_11_21 by jcf
