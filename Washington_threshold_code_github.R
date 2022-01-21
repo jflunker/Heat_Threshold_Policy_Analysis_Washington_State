@@ -2155,7 +2155,7 @@ write.csv(final_data,file = "avg_num_days_per_month_max_HI_95_mean_sd_2002_2020.
 
 # 1. to make maps showing the total number of days over HI thresholds (80,85,89,95) during warm period (May-Sep) and outside of the period (Jan-Apr, Oct-Dec) based on the average of cells within polygons
 # run this code in terminal if error found on mac with raster: xcode-select --install
-# use "washing_st_centroids.csv" file for county names when generating maps with ggplot
+# use "washing_st_centroids.csv" file for county names when generating maps with ggplot. File found in "county_shapefile" folder
 getwd()
 
 rm(list = ls())
@@ -2255,7 +2255,7 @@ poly_re = fortify(poly, region = 'NAME')
 
 all_max_HI_poly <- merge(poly_re, all_max_HI, by.x='id', by.y='NAME')
 
-#washing_st_centroids.csv = file
+#washing_st_centroids.csv = file; found in "county_shapefile" folder
 csv_file_data = read.csv("washing_st_centroids.csv") # add path to your directory
 csv_file_data_m = merge(csv_file_data, all_max_HI, by = "NAME")
 
